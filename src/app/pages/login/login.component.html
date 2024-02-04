@@ -1,0 +1,16 @@
+<div class="row mt-5">
+  <div class="col-4"></div>
+  <div class="col-4">
+    <label>Login</label>
+    <input type="text" [(ngModel)]="auth.userName" class="form-control">
+    <label>Mot de passe</label>
+    <input type="text" [(ngModel)]="auth.password"  class="form-control">
+    <button class="btn btn-primary mt-1"
+            (click)="logiIn()">Se connecter
+    </button>
+    <div class="row">
+      <app-msg-danger [msg]="'Login ou mot de passe incorrecte'" *ngIf="isLoginFailed"></app-msg-danger>
+    </div>
+  </div>
+  <div class="col-4"></div>
+</div>
